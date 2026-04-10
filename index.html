@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberOps Academy — Day 2 Mission</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #0a0e1a; color: #e0e6f0; font-family: 'Segoe UI', sans-serif; }
+    header {
+      background: linear-gradient(135deg, #0d1b2a, #1a2a4a);
+      border-bottom: 2px solid #00d4ff;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.4rem; color: #00d4ff; letter-spacing: 2px; }
+    header p { color: #8ab4d4; margin-top: 8px; font-size: 1.1rem; }
+    .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+    .badge {
+      background: #1a2a4a;
+      border: 1px solid #00d4ff44;
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      color: #00d4ff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    .badge.green { color: #00ff88; border-color: #00ff8844; }
+    .badge.red { color: #ff4757; border-color: #ff475744; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    .card {
+      background: #0f1e32;
+      border: 1px solid #1e3a5f;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+    .card h2 { color: #00d4ff; font-size: 1.4rem; margin-bottom: 20px; border-bottom: 1px solid #1e3a5f; padding-bottom: 10px; }
+    table { width: 100%; border-collapse: collapse; }
+    th { background: #1a2a4a; color: #00d4ff; padding: 12px; text-align: left; font-size: 0.9rem; letter-spacing: 1px; }
+    td { padding: 12px; border-bottom: 1px solid #1e3a5f; font-size: 0.9rem; color: #c0d0e0; }
+    tr:hover td { background: #132030; }
+    .layer-badge {
+      display: inline-block;
+      background: #0d3a5a;
+      color: #00d4ff;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-weight: bold;
+      font-size: 0.85rem;
+    }
+    .port-badge {
+      display: inline-block;
+      background: #2a0d3a;
+      color: #ff88ff;
+      border-radius: 6px;
+      padding: 3px 10px;
+      font-weight: bold;
+    }
+    .terminal {
+      background: #050a10;
+      border: 1px solid #00d4ff33;
+      border-left: 4px solid #00d4ff;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.88rem;
+      color: #00ff88;
+      white-space: pre;
+      overflow-x: auto;
+      margin-top: 15px;
+    }
+    .terminal .comment { color: #4a7a9a; }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .info-item { background: #132030; border-radius: 8px; padding: 15px; }
+    .info-item .label { color: #00d4ff; font-size: 0.8rem; letter-spacing: 1px; margin-bottom: 5px; }
+    .info-item .value { color: #e0e6f0; font-weight: bold; }
+    .takeaway { background: #0d2a1a; border-left: 4px solid #00ff88; padding: 15px 20px; border-radius: 0 8px 8px 0; margin-bottom: 12px; color: #b0e8c8; }
+    footer { text-align: center; padding: 30px; color: #4a7a9a; border-top: 1px solid #1e3a5f; margin-top: 20px; }
+    @media (max-width: 600px) { .info-grid { grid-template-columns: 1fr; } header h1 { font-size: 1.6rem; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🛡️ CyberOps Academy — Day 2 Mission</h1>
+  <p>Networking Basics &amp; Protocols · OSI Model · TCP/IP · Ports &amp; DNS</p>
+  <div class="badges">
+    <span class="badge">BOOTCAMP: CYBEROPS ACADEMY</span>
+    <span class="badge green">DAY 02 OF 30</span>
+    <span class="badge green">STATUS: COMPLETED</span>
+    <span class="badge red">DOMAIN: CYBERSECURITY</span>
+    <span class="badge">⚡ 100 XP EARNED</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📋 Mission Overview</h2>
+    <div class="info-grid">
+      <div class="info-item"><div class="label">🗓️ DATE</div><div class="value">April 10, 2026</div></div>
+      <div class="info-item"><div class="label">🎯 DAY</div><div class="value">Day 2 of 30</div></div>
+      <div class="info-item"><div class="label">🔖 TOPIC</div><div class="value">Networking Basics &amp; Protocols</div></div>
+      <div class="info-item"><div class="label">👤 ANALYST</div><div class="value">Ganesh (0407ganesh)</div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📊 The OSI Model — 7 Layers</h2>
+    <table>
+      <tr><th>Layer</th><th>Name</th><th>Function</th><th>Security Relevance</th></tr>
+      <tr><td><span class="layer-badge">L7</span></td><td>Application</td><td>HTTP, FTP, SMTP, DNS</td><td>Malware C2, phishing, injection</td></tr>
+      <tr><td><span class="layer-badge">L6</span></td><td>Presentation</td><td>Encryption, encoding (SSL/TLS)</td><td>SSL stripping, encoding attacks</td></tr>
+      <tr><td><span class="layer-badge">L5</span></td><td>Session</td><td>Manages sessions between apps</td><td>Session hijacking</td></tr>
+      <tr><td><span class="layer-badge">L4</span></td><td>Transport</td><td>TCP/UDP, ports, reliability</td><td>Port scanning, SYN floods</td></tr>
+      <tr><td><span class="layer-badge">L3</span></td><td>Network</td><td>IP addressing, routing</td><td>IP spoofing, routing attacks</td></tr>
+      <tr><td><span class="layer-badge">L2</span></td><td>Data Link</td><td>MAC addresses, switches, ARP</td><td>ARP poisoning, MAC spoofing</td></tr>
+      <tr><td><span class="layer-badge">L1</span></td><td>Physical</td><td>Cables, signals, bits</td><td>Physical tampering, eavesdropping</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>🔌 Critical Ports Every Analyst Must Know</h2>
+    <table>
+      <tr><th>Port</th><th>Protocol</th><th>Description</th><th>Attacker Interest</th></tr>
+      <tr><td><span class="port-badge">22</span></td><td>SSH</td><td>Secure remote login</td><td>Brute force attacks</td></tr>
+      <tr><td><span class="port-badge">80</span></td><td>HTTP</td><td>Unencrypted web traffic</td><td>Man-in-the-middle</td></tr>
+      <tr><td><span class="port-badge">443</span></td><td>HTTPS</td><td>Encrypted web traffic</td><td>SSL inspection, C2 hiding</td></tr>
+      <tr><td><span class="port-badge">21</span></td><td>FTP</td><td>File transfer (unencrypted)</td><td>Credential sniffing</td></tr>
+      <tr><td><span class="port-badge">53</span></td><td>DNS</td><td>Domain name resolution</td><td>DNS tunneling, poisoning</td></tr>
+      <tr><td><span class="port-badge">3389</span></td><td>RDP</td><td>Windows Remote Desktop</td><td>Ransomware delivery</td></tr>
+      <tr><td><span class="port-badge">445</span></td><td>SMB</td><td>Windows file sharing</td><td>EternalBlue / WannaCry</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>🤝 TCP 3-Way Handshake</h2>
+    <div class="terminal"><span class="comment"># TCP 3-Way Handshake (how connections start)</span>
+Client → Server:  SYN       <span class="comment"># "Hello, can we talk?"</span>
+Server → Client:  SYN-ACK   <span class="comment"># "Yes! Ready."</span>
+Client → Server:  ACK       <span class="comment"># "Great, let's go!"</span>
+
+<span class="comment"># SYN Flood attack = sending thousands of SYNs without ACK</span>
+<span class="comment"># This exhausts server resources — a classic DoS attack vector</span></div>
+  </div>
+
+  <div class="card">
+    <h2>🔎 DNS Abuse Techniques</h2>
+    <table>
+      <tr><th>Attack Type</th><th>Description</th></tr>
+      <tr><td>DNS Poisoning</td><td>Injecting fake DNS records to redirect users to malicious sites</td></tr>
+      <tr><td>DNS Tunneling</td><td>Hiding data or C2 traffic inside DNS queries to bypass firewalls</td></tr>
+      <tr><td>Typosquatting</td><td>Registering similar-looking domains (g00gle.com) to trick users</td></tr>
+      <tr><td>DNS Amplification</td><td>Using open DNS resolvers for DDoS amplification attacks</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>🧠 Key Takeaways</h2>
+    <div class="takeaway">• The <strong>OSI Model</strong> maps every network attack to a specific layer — essential for threat analysis</div>
+    <div class="takeaway">• <strong>Port numbers</strong> are attack entry points — know common ports to spot suspicious traffic</div>
+    <div class="takeaway">• The <strong>TCP 3-Way Handshake</strong> is fundamental to understanding connection-based attacks like SYN floods</div>
+    <div class="takeaway">• <strong>DNS</strong> is heavily abused for tunneling, poisoning, and C2 communication</div>
+    <div class="takeaway">• <strong>HTTPS ≠ Safe</strong> — encrypted malware traffic is a real threat SOC analysts must handle</div>
+  </div>
+
+</div>
+
+<footer>
+  <p>🛡️ CyberOps Academy — 30-Day Analyst Bootcamp &nbsp;|&nbsp; Day 2 of 30 &nbsp;|&nbsp; Ganesh (0407ganesh)</p>
+  <p style="margin-top:8px;">Aspiring Cybersecurity Analyst · BCA 3rd Year · Bengaluru, Karnataka</p>
+</footer>
+
+</body>
+</html>
